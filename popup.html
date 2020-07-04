@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roll Call</title>
   <!-- CSS only -->
-  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
   <link href="/style/fontawesome/css/all.css" rel="stylesheet">
 
 
@@ -18,35 +18,42 @@
     <button id="getUsersBtn" type="button" class="d-none btn btn-primary btn-sm">Create New Roll</button>
   </div>
 
-
+  <!-- Class selctor group -->
   <div class="container p-1">
     <div class="input-group my-1">
       <div class="input-group-prepend">
         <label class="input-group-text" for="sectionSelect">Class:</label>
       </div>
-      <select class="custom-select" name="sectionSelect" id="sectionSelect"></select>
+      <select class="form-select" name="sectionSelect" id="sectionSelect"></select>
     </div>
 
     <div id='addClassDiv' class="my-1 input-group mb-3">
-      <input id='classNameInput' type="text" class="form-control" placeholder="Enter a class name" aria-label="New Class Name"
-        aria-describedby="basic-addon2">
+      <input id='classNameInput' type="text" class="form-control" placeholder="New Class Name"
+        aria-label="New Class Name" aria-describedby="basic-addon2">
       <div class="input-group-append">
         <button id='addClassBtn' class="btn btn-outline-secondary" type="button">Add</button>
       </div>
     </div>
 
-    <div id="alertDiv" class="alert alert-primary">Add or Select a Class Above to Continue</div>
+    <div id="alertDiv" class="shadow m-1 alert alert-primary">
+      <h4>Welcome to Roll Call!</h4>
+
+      <p>Add or select a class above to continue</p>
+      <hr>
+      <p>After you create a new class, you can add participants to your roster. This class will be saved for future Google Meet Sessions.</p>
+
+    </div>
 
 
-    <div class="container-fluid list_area d-none">
+    <div class="mt-2 container-fluid list_area d-none">
       New Participants:
-      <ul class='list-group' id='newParticipantList'>
+      <ul class='list-group shadow' id='newParticipantList'>
       </ul>
     </div>
 
-    <div id='savedListDiv' class="container-fluid list_area d-none">
-       Saved Participants: <strong id='savedListFraction'></strong>
-      <ul class='list-group' id='studentList'>
+    <div id='savedListDiv' class="mt-2 container-fluid list_area d-none">
+      Saved Participants: <strong id='savedListFraction'></strong>
+      <ul class='list-group shadow' id='studentList'>
       </ul>
     </div>
 

@@ -22,7 +22,7 @@ const getUsers = ()=>{
     /// wait for the userlist to appear before trying to get users
     setTimeout(()=>{
       const alldivs = document.querySelectorAll("div[data-participant-id]");
-      jumbo_meeting = alldivs.length>12 ? true : false;
+      jumbo_meeting = alldivs.length>8 ? true : false;
       if(!alldivs) resolve([null]);
       let users=[];
       for(let d of alldivs){
