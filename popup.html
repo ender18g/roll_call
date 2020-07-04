@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll Call</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link href="/style/fontawesome/css/all.css" rel="stylesheet">
+
+
+</head>
+
+<body style="min-width: 250px;">
+  <div class="container mx-auto">
+    <button id="takeRollBtn" type="button" class="d-none btn btn-success btn-sm">Take Roll</button>
+    <button id="getUsersBtn" type="button" class="d-none btn btn-primary btn-sm">Create New Roll</button>
+  </div>
+
+
+  <div class="container p-1">
+    <div class="input-group my-1">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="sectionSelect">Class:</label>
+      </div>
+      <select class="custom-select" name="sectionSelect" id="sectionSelect"></select>
+    </div>
+
+    <div id='addClassDiv' class="my-1 input-group mb-3">
+      <input id='classNameInput' type="text" class="form-control" placeholder="Enter a class name" aria-label="New Class Name"
+        aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button id='addClassBtn' class="btn btn-outline-secondary" type="button">Add</button>
+      </div>
+    </div>
+
+    <div id="alertDiv" class="alert alert-primary">Add or Select a Class Above to Continue</div>
+
+
+    <div class="container-fluid list_area d-none">
+      New Participants:
+      <ul class='list-group' id='newParticipantList'>
+      </ul>
+    </div>
+
+    <div id='savedListDiv' class="container-fluid list_area d-none">
+       Saved Participants: <strong id='savedListFraction'></strong>
+      <ul class='list-group' id='studentList'>
+      </ul>
+    </div>
+
+  </div>
+  <div class="container text-center mx-auto my-2">
+    <button id="deleteClassBtn" type="button" class="d-none btn btn-danger btn-sm">Delete Entire Class</button>
+  </div>
+
+</body>
+<script src="popup.js"></script>
+
+</html>
