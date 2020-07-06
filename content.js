@@ -26,8 +26,12 @@ const getUsers = ()=>{
       if(!alldivs) resolve([null]);
       let users=[];
       for(let d of alldivs){
-        let name = d.children[0].children[1].children[0].innerText;
+        try{
+          let name = d.children[0].children[1].children[0].innerText;
           users.push(name);
+        } catch {
+          console.log('error reading users');
+        }
       }
       console.log(users);
       //set zoom back to 100%
